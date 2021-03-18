@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strclen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: telias-p <telias-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/13 18:30:07 by telias-p          #+#    #+#             */
-/*   Updated: 2021/03/12 17:39:56 by telias-p         ###   ########.fr       */
+/*   Created: 2021/03/12 17:34:11 by telias-p          #+#    #+#             */
+/*   Updated: 2021/03/12 18:55:36 by telias-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** strdup retorna um ponteiro pra dest(nova string), que é copia de src
+** strcclen devolve posição de caractere procurado na string, usando len
 */
 
-char	*ft_strdup(const char *src)
+size_t	ft_strclen(const char *str, const char c)
 {
-	char *dest;
+	unsigned int i;
 
-	if (!(dest = (char *)malloc(ft_strlen(src) + 1)))
-		return (0);
-	ft_memcpy(dest, src, ft_strlen(src) + 1);
-	return (dest);
+	i = 0;
+	while (str[i] && str[i] != c)
+		i++;
+	return (i);
 }

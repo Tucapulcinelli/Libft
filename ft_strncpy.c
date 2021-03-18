@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: telias-p <telias-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/13 18:30:07 by telias-p          #+#    #+#             */
-/*   Updated: 2021/03/12 17:39:56 by telias-p         ###   ########.fr       */
+/*   Created: 2021/03/12 18:28:05 by telias-p          #+#    #+#             */
+/*   Updated: 2021/03/12 18:55:59 by telias-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** strdup retorna um ponteiro pra dest(nova string), que é copia de src
-*/
-
-char	*ft_strdup(const char *src)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	char *dest;
+	unsigned int i;
 
-	if (!(dest = (char *)malloc(ft_strlen(src) + 1)))
-		return (0);
-	ft_memcpy(dest, src, ft_strlen(src) + 1);
+	i = 0;
+	while (src[i] != '\0' && i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
 	return (dest);
 }
