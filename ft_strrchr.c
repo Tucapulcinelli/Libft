@@ -6,7 +6,7 @@
 /*   By: telias-p <telias-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 18:30:57 by telias-p          #+#    #+#             */
-/*   Updated: 2021/02/20 18:41:56 by telias-p         ###   ########.fr       */
+/*   Updated: 2021/04/05 20:29:02 by telias-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,15 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	len;
+	int i;
+	const char *ini;
 
-	len = ft_strlen(s);
-	while (len >= 0)
-	{
-		if (*(s + len) == (char)c)
-			return ((char *)s + len);
-		len--;
-	}
-	return (NULL);
+	ini = s;
+	i = ft_strlen(s);
+	s = (s + i);
+	while (*s != *ini && c != *s)
+		s--;
+	if (c == *s)
+		return ((char *)s);
+	return (0);
 }

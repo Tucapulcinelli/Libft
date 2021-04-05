@@ -6,7 +6,7 @@
 /*   By: telias-p <telias-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 18:31:03 by telias-p          #+#    #+#             */
-/*   Updated: 2021/02/20 17:15:42 by telias-p         ###   ########.fr       */
+/*   Updated: 2021/04/05 20:29:08 by telias-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
+	size_t  i;
 
 	if (!s1 || !set)
 		return (0);

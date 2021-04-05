@@ -6,7 +6,7 @@
 /*   By: telias-p <telias-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 18:30:51 by telias-p          #+#    #+#             */
-/*   Updated: 2021/02/20 17:15:24 by telias-p         ###   ########.fr       */
+/*   Updated: 2021/04/05 20:28:58 by telias-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			n++;
 		}
 		if (needle[n] == '\0')
-			return ((char *)haystack + h);
+			return (( char *)haystack + h);
 		h++;
 	}
 	return (0);

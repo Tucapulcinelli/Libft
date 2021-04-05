@@ -6,16 +6,11 @@
 /*   By: telias-p <telias-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 17:37:26 by telias-p          #+#    #+#             */
-/*   Updated: 2021/03/12 18:55:29 by telias-p         ###   ########.fr       */
+/*   Updated: 2021/04/05 20:28:16 by telias-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-** stjoin junta as strings fornecidas no argumento, e retorna uma string
-** alocada new_str, depois libera mem com strdel, de dest
-*/
 
 char	*ft_strjoin_free(char *dest, char *src)
 {

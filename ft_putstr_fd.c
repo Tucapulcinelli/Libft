@@ -6,7 +6,7 @@
 /*   By: telias-p <telias-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 18:29:46 by telias-p          #+#    #+#             */
-/*   Updated: 2021/02/20 17:14:23 by telias-p         ###   ########.fr       */
+/*   Updated: 2021/04/05 20:27:09 by telias-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,16 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (s == NULL)
+	size_t	len;
+	size_t	i;
+
+	if (!s)
 		return ;
-	while (*s)
-		ft_putchar_fd(*s++, fd);
+	i = 0;
+	len = ft_strlen(s);
+	while (i < len)
+	{
+		ft_putchar_fd(*(s + i), fd);
+		i++;
+	}
 }
